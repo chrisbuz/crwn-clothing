@@ -4,9 +4,13 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 
 import './collection.styles.scss';
 
-const CollectionPage = ({ match }) => (
+const CollectionPage = ({
+  match: {
+    params: { collectionId }
+  }
+}) => (
   <div className='collection-page'>
-    <h2>Category</h2>
+    <h2>Category {`${collectionId}`}</h2>
   </div>
 );
 
